@@ -103,7 +103,7 @@ export const Hero = () => {
             <div className="absolute inset-y-3 right-[-3%] z-0 w-14 rounded-2xl bg-brand-peach sm:inset-y-5 sm:w-18 md:right-[2%] md:w-22" />
 
             <Image
-              src="/assets/image-hero.svg"
+              src="/assets/hero-optimized.webp"
               alt="Learner studying at a laptop"
               width={500}
               height={520}

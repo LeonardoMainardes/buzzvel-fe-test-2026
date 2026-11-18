@@ -99,7 +99,7 @@ export const FinalCTA = () => {
           <p className="text-body font-medium text-foreground/75 md:text-lg">
             Start with one course. Build from there.
           </p>
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-col justify-center gap-2 md:flex-row">
             <LumaButton label="Explore all courses" className="font-bold" />
             <LumaButton label="Join Luma" className="font-bold" variant="white" />
           </div>
