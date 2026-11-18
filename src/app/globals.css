@@ -8,10 +8,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
+  /* Typography */
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-inter);
+  --font-heading: var(--font-plus-jakarta-sans);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
+  /* Semantic colors */
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -32,12 +34,16 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+  /* Brand colors */
   --color-brand-blue: var(--brand-blue);
   --color-brand-peach: var(--brand-peach);
   --color-brand-yellow: var(--brand-yellow);
   --color-brand-orange: var(--brand-orange);
   --color-brand-lavender: var(--brand-lavender);
+  --color-brand-corn: var(--brand-corn);
+  --color-brand-pastel: var(--brand-pastel);
 
+  /* Sidebar */
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -47,12 +53,14 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
+  /* Charts */
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
 
+  /* Border radius */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -61,6 +69,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
+  /* Typography scale */
   --text-display: clamp(2.5rem, 1.818rem + 3.41vw, 4rem);
   --text-heading: clamp(2rem, 1.545rem + 2.27vw, 3rem);
   --text-subheading: clamp(1.25rem, 1.136rem + 0.57vw, 1.5rem);
@@ -80,6 +89,8 @@
   --brand-yellow: #ffee7e;
   --brand-orange: #ff704d;
   --brand-lavender: #e2e8ff;
+  --brand-corn: #e9d659;
+  --brand-pastel: #fff1c2;
 
   /* Semantic colors */
   --card: #ffffff;
@@ -167,5 +178,22 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter);
   }
+
+  h1,
+  h2 {
+    font-family: var(--font-plus-jakarta-sans);
+  }
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
