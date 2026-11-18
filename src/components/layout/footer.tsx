@@ -1,4 +1,4 @@
-import { LumaLogo } from '../common/luma-logo-svg';
+import { LumaLogo } from '@/components/common/luma-logo-svg';
 import { Container } from './container';
 
 export const Footer = () => {

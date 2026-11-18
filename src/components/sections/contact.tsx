@@ -5,13 +5,13 @@ import { Check, Clock, MessageCircleMore } from 'lucide-react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { LumaButton } from '@/components/common/luma-button';
+import { LumaCard } from '@/components/common/luma-card';
+import { LumaInput } from '@/components/common/luma-input';
+import { LumaTextarea } from '@/components/common/luma-textarea';
+import { Container } from '@/components/layout/container';
+import { CardDescription, CardTitle } from '@/components/ui/card';
 import { type ContactFormData, contactSchema } from '@/lib/schemas/contact-schema';
-import { LumaButton } from '../common/luma-button';
-import { LumaCard } from '../common/luma-card';
-import { LumaInput } from '../common/luma-input';
-import { LumaTextarea } from '../common/luma-textarea';
-import { Container } from '../layout/container';
-import { CardDescription, CardTitle } from '../ui/card';
 
 export const Contact = () => {
   const {

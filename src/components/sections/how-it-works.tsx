@@ -1,4 +1,4 @@
-import { Container } from '../layout/container';
+import { Container } from '@/components/layout/container';
 
 export const HowItWorks = () => {
   return (

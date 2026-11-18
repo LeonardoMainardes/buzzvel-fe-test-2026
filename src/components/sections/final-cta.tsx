@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import { LumaButton } from '../common/luma-button';
-import { Container } from '../layout/container';
+import { LumaButton } from '@/components/common/luma-button';
+import { Container } from '@/components/layout/container';
 
 export const FinalCTA = () => {
   return (
