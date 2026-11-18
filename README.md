@@ -220,6 +220,8 @@ Recorded results:
 - `bun run build`: passed.
 - `bun run build-storybook`: passed.
 
+<img width="1840" height="944" alt="image" src="https://github.com/user-attachments/assets/beccc5bf-0ef6-4a2b-b8ea-598fac32b9d1" />
+
 ## Known Limitations
 
 - The application does not include a backend or CMS integration. Content is defined directly in the project.
