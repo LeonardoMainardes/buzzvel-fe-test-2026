@@ -10,14 +10,14 @@ export const Testimonial = () => {
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[1.8fr_1fr]">
           <div className="flex flex-col gap-7">
             <div className="text-sm font-semibold text-brand-blue">
-              <Quote size={24} className="fill-current" />
+              <Quote aria-hidden="true" size={24} className="fill-current" />
             </div>
             <h2 className="max-w-150 text-xl font-semibold leading-tight text-foreground sm:text-3xl md:text-[30px]">
               The lessons are short enough to fit into my week, but detailed enough that I actually
               leave with something I can use.
             </h2>
             <div className="flex items-center gap-4">
-              <Image src="/assets/alex-morgan.svg" alt="Testimonial Image" width={48} height={48} />
+              <Image src="/assets/alex-morgan.svg" alt="Alex Morgan" width={48} height={48} />
 
               <div className="flex flex-col">
                 <p className="text-base font-semibold text-foreground">Alex Morgan</p>
