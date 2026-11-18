@@ -1,7 +1,4 @@
-'use client';
-
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
 
 import { LumaButton } from '@/components/common/luma-button';
 import { Container } from '@/components/layout/container';
@@ -10,8 +7,6 @@ import { LumaLogo } from '../common/luma-logo-svg';
 const navigationLinks = ['Courses', 'For Teams', 'Community', 'About'];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <header className="relative z-50 w-full border bg-background">
       <Container>
@@ -35,39 +30,34 @@ export function Header() {
             <LumaButton label="Start learning" />
           </div>
 
-          <LumaButton
-            type="button"
-            variant="ghost"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-navigation"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden"
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </LumaButton>
+          <details className="group relative md:hidden">
+            <summary
+              aria-label="Toggle navigation menu"
+              className="flex size-10 cursor-pointer list-none items-center justify-center rounded-md text-foreground transition-colors hover:bg-accent [&::-webkit-details-marker]:hidden"
+            >
+              <Menu className="h-5 w-5 group-open:hidden" aria-hidden="true" />
+              <X className="hidden h-5 w-5 group-open:block" aria-hidden="true" />
+            </summary>
+
+            <nav
+              aria-label="Mobile navigation"
+              className="absolute top-full right-0 flex min-w-90 flex-col gap-5 rounded-md border-t border-border bg-background p-6 shadow-lg md:hidden"
+            >
+              {navigationLinks.map((label) => (
+                <span
+                  key={label}
+                  className="text-sm font-medium text-foreground transition-colors hover:text-brand-blue"
+                >
+                  {label}
+                </span>
+              ))}
+
+              <LumaButton variant="ghost" label="Log in" />
+
+              <LumaButton label="Start learning" />
+            </nav>
+          </details>
         </div>
-
-        {isMenuOpen && (
-          <nav
-            id="mobile-navigation"
-            aria-label="Mobile navigation"
-            className="flex flex-col gap-5 border-t border-border py-6 md:hidden"
-          >
-            {navigationLinks.map((label) => (
-              <span
-                key={label}
-                className="text-sm font-medium text-foreground transition-colors hover:text-brand-blue"
-              >
-                {label}
-              </span>
-            ))}
-
-            <LumaButton variant="ghost" label="Log in" />
-
-            <LumaButton label="Start learning" />
-          </nav>
-        )}
       </Container>
     </header>
   );
