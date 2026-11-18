@@ -35,6 +35,7 @@ type LumaButtonProps = Omit<React.ComponentProps<typeof Button>, 'variant' | 'si
     hover?: boolean;
     icon?: ReactNode;
     iconPosition?: 'start' | 'end';
+    href?: string;
   };
 
 const hoverVariants = {
@@ -55,23 +56,31 @@ export function LumaButton({
   iconPosition = 'start',
   className,
   children,
+  href,
   ...props
 }: LumaButtonProps) {
-  return (
-    <Button
-      className={cn(
-        lumaButtonVariants({ variant, size }),
-        hover && hoverVariants[variant ?? 'primary'],
-        className,
-      )}
-      {...props}
-    >
+  const buttonClassName = cn(
+    lumaButtonVariants({ variant, size }),
+    hover && hoverVariants[variant ?? 'primary'],
+    className,
+  );
+
+  const content = (
+    <>
       {label}
       {icon && iconPosition === 'start' && <span aria-hidden="true">{icon}</span>}
-
       {children}
-
       {icon && iconPosition === 'end' && <span aria-hidden="true">{icon}</span>}
+    </>
+  );
+
+  return (
+    <Button
+      {...props}
+      className={buttonClassName}
+      render={href ? <a href={href}>{content}</a> : undefined}
+    >
+      {content}
     </Button>
   );
 }

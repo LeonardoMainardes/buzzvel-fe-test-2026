@@ -4,7 +4,12 @@ import { LumaButton } from '@/components/common/luma-button';
 import { Container } from '@/components/layout/container';
 import { LumaLogo } from '../common/luma-logo-svg';
 
-const navigationLinks = ['Courses', 'For Teams', 'Community', 'About'];
+const navigationLinks = [
+  { label: 'Courses', href: '#categories' },
+  { label: 'For Teams', href: '#contact' },
+  { label: 'Community', href: '#people' },
+  { label: 'About', href: '#how-it-works' },
+];
 
 export function Header() {
   return (
@@ -14,20 +19,21 @@ export function Header() {
           <LumaLogo className="text-foreground" />
 
           <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
-            {navigationLinks.map((label) => (
-              <span
+            {navigationLinks.map(({ label, href }) => (
+              <a
                 key={label}
+                href={href}
                 className="text-sm text-foreground/75 transition-colors hover:text-brand-blue"
               >
                 {label}
-              </span>
+              </a>
             ))}
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
             <LumaButton variant="ghost" className="text-foreground/75" label="Log in" />
 
-            <LumaButton label="Start learning" />
+            <LumaButton href="#contact" label="Start learning" />
           </div>
 
           <details className="group relative md:hidden">
@@ -43,13 +49,14 @@ export function Header() {
               aria-label="Mobile navigation"
               className="absolute top-full right-0 flex min-w-90 flex-col gap-5 rounded-md border-t border-border bg-background p-6 shadow-lg md:hidden"
             >
-              {navigationLinks.map((label) => (
-                <span
+              {navigationLinks.map(({ label, href }) => (
+                <a
                   key={label}
+                  href={href}
                   className="text-sm font-medium text-foreground transition-colors hover:text-brand-blue"
                 >
                   {label}
-                </span>
+                </a>
               ))}
 
               <LumaButton variant="ghost" label="Log in" />

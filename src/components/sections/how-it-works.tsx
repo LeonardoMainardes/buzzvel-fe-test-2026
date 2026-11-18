@@ -2,7 +2,7 @@ import { Container } from '@/components/layout/container';
 
 export const HowItWorks = () => {
   return (
-    <section className="bg-background py-16">
+    <section id="how-it-works" className="bg-background py-16">
       <Container className="flex flex-col gap-10">
         <div className="flex flex-col items-center justify-center gap-4 text-center md:gap-6">
           <p className="text-xs font-semibold text-brand-blue">HOW LUMA WORKS</p>

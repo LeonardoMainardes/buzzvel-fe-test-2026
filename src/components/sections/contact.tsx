@@ -11,7 +11,7 @@ const ContactForm = dynamic(() => import('./contact-form').then((mod) => mod.Con
 
 export const Contact = () => {
   return (
-    <section className="bg-white py-16">
+    <section id="contact" className="bg-white py-16">
       <Container>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div className="flex max-w-120 flex-col items-start gap-5">

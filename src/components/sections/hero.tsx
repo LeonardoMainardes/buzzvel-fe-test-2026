@@ -24,8 +24,13 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <LumaButton className="px-7 font-bold" label="Explore courses" />
-              <LumaButton className="px-7 font-bold" variant="white" label="See how it works" />
+              <LumaButton href="#categories" className="px-7 font-bold" label="Explore courses" />
+              <LumaButton
+                href="#how-it-works"
+                className="px-7 font-bold"
+                variant="white"
+                label="See how it works"
+              />
             </div>
 
             <div className="flex w-full items-center justify-center gap-2 self-start sm:justify-start">
