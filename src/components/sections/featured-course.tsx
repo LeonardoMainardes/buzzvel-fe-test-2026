@@ -8,10 +8,10 @@ import { CardContent, CardTitle } from '@/components/ui/card';
 
 export const FeaturedCourse = () => {
   return (
-    <section className="bg-brand-blue py-16">
+    <section id="featured-course" className="bg-brand-blue py-16">
       <Container className="text-white">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-15">
-          <div id="image-area" className="relative w-full">
+          <div className="relative w-full">
             <LumaCard
               variant="floating"
               size="sm"
@@ -74,12 +74,15 @@ export const FeaturedCourse = () => {
 
             <div className="mt-6 flex flex-col items-center gap-2 md:mt-auto md:flex-row md:gap-4 md:w-full">
               <LumaButton
+                href="#contact"
                 className="font-bold w-full md:w-auto"
                 variant="link"
                 label="View course"
               />
 
               <LumaButton
+                href="#categories"
+                aria-hidden="true"
                 className="text-white font-bold w-full md:w-auto"
                 variant="ghost"
                 icon={<ArrowRight size={18} />}

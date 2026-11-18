@@ -14,20 +14,57 @@ export const Footer = () => {
             </p>
           </div>
 
-          <nav className="grid grid-cols-2 gap-8 md:grid-cols-3">
+          <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-8 md:grid-cols-3">
             <div className="flex flex-col gap-8 md:contents">
               <div className="flex flex-col gap-3">
                 <h3 className="mb-1 text-xs font-semibold tracking-wider text-white">EXPLORE</h3>
-                <span className="text-sm text-white/80">Courses</span>
-                <span className="text-sm text-white/80">Categories</span>
-                <span className="text-sm text-white/80">Instructors</span>
-                <span className="text-sm text-white/80">For Teams</span>
+
+                <a
+                  href="#categories"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Courses
+                </a>
+
+                <a
+                  href="#categories"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Categories
+                </a>
+
+                <a
+                  href="#people"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Instructors
+                </a>
+
+                <a
+                  href="#contact"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  For Teams
+                </a>
               </div>
 
               <div className="flex flex-col gap-3">
                 <h3 className="mb-1 text-xs font-semibold tracking-wider text-white">SUPPORT</h3>
-                <span className="text-sm text-white/80">Help Center</span>
-                <span className="text-sm text-white/80">Contact</span>
+
+                <a
+                  href="#contact"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Help Center
+                </a>
+
+                <a
+                  href="#contact"
+                  className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Contact
+                </a>
+
                 <span className="text-sm text-white/80">Terms</span>
                 <span className="text-sm text-white/80">Privacy</span>
               </div>
@@ -35,7 +72,14 @@ export const Footer = () => {
 
             <div className="flex flex-col gap-3">
               <h3 className="mb-1 text-xs font-semibold tracking-wider text-white">COMPANY</h3>
-              <span className="text-sm text-white/80">About</span>
+
+              <a
+                href="#how-it-works"
+                className="text-sm text-white/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                About
+              </a>
+
               <span className="text-sm text-white/80">Careers</span>
               <span className="text-sm text-white/80">Journal</span>
             </div>

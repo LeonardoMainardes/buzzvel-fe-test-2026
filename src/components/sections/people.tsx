@@ -5,7 +5,7 @@ import { Container } from '@/components/layout/container';
 
 export const People = () => {
   return (
-    <section className="overflow-hidden bg-background py-16">
+    <section id="people" className="overflow-hidden bg-background py-16">
       <Container>
         <div className="grid grid-cols-1 items-center md:grid-cols-2 md:gap-8">
           <div className="flex flex-col items-start gap-3 md:gap-5">
@@ -21,7 +21,11 @@ export const People = () => {
               Placerat ipsum sit tellus urna, faucibus aenean lorem faucibus integer.
             </p>
 
-            <LumaButton variant="outline" className="mt-1 border-border bg-white font-bold">
+            <LumaButton
+              href="#final-cta"
+              variant="outline"
+              className="mt-1 border-border bg-white font-bold"
+            >
               Explore teachers and students
             </LumaButton>
           </div>

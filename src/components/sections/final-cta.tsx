@@ -5,7 +5,7 @@ import { Container } from '@/components/layout/container';
 
 export const FinalCTA = () => {
   return (
-    <section className="relative overflow-hidden bg-brand-pastel py-16">
+    <section id="final-cta" className="relative overflow-hidden bg-brand-pastel py-16">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden md:block">
         <span className="absolute left-[1%] top-[2%] size-27 rounded-full border-2 border-[#FFCB9F]" />
 
@@ -100,8 +100,8 @@ export const FinalCTA = () => {
             Start with one course. Build from there.
           </p>
           <div className="flex flex-col justify-center gap-2 md:flex-row">
-            <LumaButton label="Explore all courses" className="font-bold" />
-            <LumaButton label="Join Luma" className="font-bold" variant="white" />
+            <LumaButton href="#categories" label="Explore all courses" className="font-bold" />
+            <LumaButton href="#contact" label="Join Luma" className="font-bold" variant="white" />
           </div>
         </div>
       </Container>
