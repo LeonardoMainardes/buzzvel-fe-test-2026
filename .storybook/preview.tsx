@@ -1,4 +1,9 @@
+/// <reference types="vite/client" />
+
 import type { Preview } from '@storybook/nextjs-vite';
+
+import './preview.css';
+import '../src/app/globals.css';
 
 const preview: Preview = {
   parameters: {
@@ -8,9 +13,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    a11y: {
-      test: 'todo',
-    },
+    layout: 'centered',
   },
 };
 
