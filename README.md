@@ -228,6 +228,12 @@ Recorded results:
 - The contact form performs client-side validation only and is not connected to an external service for message processing or persistent storage.
 - The quotation mark icon used in the testimonial section differs from the original Figma design due to the limitations and available options of the icon library used in the project.
 
+## Known Issues
+
+- **Base UI native button warning:** During development and server-side rendering, Base UI reports a warning indicating that a component configured with `nativeButton={true}` is rendering an element other than a native HTML `<button>`. This warning was observed in multiple `LumaButton` instances (8 reported occurrences), including usages across the Hero, Featured Course, People, and Final CTA sections. The stack trace also references the Header component.
+  
+This does not prevent the page from rendering, but it indicates a potential inconsistency in native button semantics, which may affect accessibility and form-related behavior. Base UI recommends rendering a native `<button>` through the `render` prop or setting `nativeButton={false}`, depending on the intended component behavior.
+
 ## AI Tools
 
 ChatGPT and Cursor were used as supporting tools throughout development, mainly for technical research, troubleshooting, code review, and workflow assistance.
